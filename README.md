@@ -16,3 +16,13 @@ alembic upgrade head - выполнить миграции
   
 Запуск приложения:  
 uvicorn app.main:app --port 8000 --reload  
+  
+Файл .env:  
+PG_NAME=*****  
+PG_USER=*****  
+PG_PASSWORD=*****  
+PG_HOST=*****  
+PG_PORT=*****  
+  
+SECRET_KEY=*****  
+ALGORITHM=*****  
