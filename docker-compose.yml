@@ -1,0 +1,25 @@
+services:
+  web:
+    # Берем Dockerfile из каталога app
+    build:
+      context: .
+      dockerfile: ./app/Dockerfile
+    # Запускаем тестовый сервер
+    command: uvicorn app.main:app --host 0.0.0.0
+    # Открываем порт 8000 внутри и снаружи
+    env_file:
+      - .env
+    ports:
+      - 8000:8000
+
+  db:
+    image: postgres:15
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=${PG_USER}
+      - POSTGRES_PASSWORD=${PG_PASSWORD}
+      - POSTGRES_DB=${PG_NAME}
+
+volumes:
+  postgres_data:

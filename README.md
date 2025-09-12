@@ -26,3 +26,14 @@ PG_PORT=*****
   
 SECRET_KEY=*****  
 ALGORITHM=*****  
+
+
+Запуск с docker-compose:  
+docker-compose down -v - удалим предыдущий контейнер  
+docker-compose up -d --build - выполним билд и запуск наших контейнеров еще раз  
+docker-compose exec web alembic upgrade head - выполним миграции
+docker-compose exec db psql --username=postgres_user --dbname=postgres_database  
+-   
+- \l убедимся, что были созданы таблицы нашего проекта FastAPI  
+- 
+

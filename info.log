@@ -1,0 +1,6 @@
+Log: [5c37a54d-2d9f-4a5d-856d-98f4c25d5980:2025-08-27T12:45:33.514061+0300 - INFO - Successfully accessed /docs]
+Log: [2e874e23-a43d-4c43-a6c2-ff284c149ac3:2025-08-27T12:45:34.089275+0300 - INFO - Successfully accessed /openapi.json]
+Log: [ab2dad79-92e8-4692-9950-79e46da0fb2b:2025-08-27T12:45:49.712753+0300 - INFO - Successfully accessed /]
+Log: [1924831b-4552-413b-b559-a799af34f18a:2025-08-27T12:45:57.146280+0300 - INFO - Successfully accessed /]
+Log: [2c083089-02cd-4269-aac5-bf0e5248cae8:2025-08-27T12:46:23.090445+0300 - WARNING - Request to /categories/ failed]
+Log: [7b6f6953-05bd-4448-a6de-64842b522a2d:2025-08-27T12:48:44.743660+0300 - INFO - Successfully accessed /]
