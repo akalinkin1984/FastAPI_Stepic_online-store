@@ -35,5 +35,16 @@ docker-compose exec web alembic upgrade head - выполним миграции
 docker-compose exec db psql --username=postgres_user --dbname=postgres_database  
 -   
 - \l убедимся, что были созданы таблицы нашего проекта FastAPI  
-- 
+
+
+Запуск с Gunicorn/Uvicorn:  
+docker compose down -v - Выполним остановку предыдущих запущенных контейнеров, удалим их  
+docker compose -f docker-compose.prod.yml up -d --build - Пересоберём образ, создадим и запустим контейнеры  
+docker compose -f docker-compose.prod.yml exec web alembic upgrade head - Применим миграции, при которых будет создана структура нашей базы данных  
+  
++NGINX:
+docker compose -f docker-compose.prod.yml down -v - Теперь остановим контейнеры и удалим их  
+docker compose -f docker-compose.prod.yml up -d --build - Пересоберём образы, создадим и запустим контейнеры еще раз, и убедимся, что они работают  
+docker compose -f docker-compose.prod.yml exec web alembic upgrade head - применим миграции  
+
 
